@@ -6,7 +6,7 @@ build:
 	docker build -t $(IMAGE_NAME) .
 
 run:
-	docker run --env-file .env $(IMAGE_NAME)
+	docker run -v /tmp:/app/data --env-file .env my-trading-bot
 
 # Clean up Docker resources
 clean:
